@@ -1,0 +1,17 @@
+Api Payment Gateway
+
+gate name: Paypal- Payflow Pro
+
+lang- python+FastApi
+Method Reverse enginerring 
+
+Features;
+1. 10$ based donation request into payflow Api
+2. site manipulated ethically without harming any one
+3. Random UA and Fresh Browser fingerprint
+4. Random IP address
+5. Mass CC Check Features upto 350ccs on 10 residential proxies
+6. fully transparent response from Gateway
+
+User rights: Not available, only can be purchased from me.
+strictly forbidden to use in any illegal activities.

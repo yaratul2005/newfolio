@@ -785,6 +785,93 @@ ul {
 }
 
 /* =========================================
+   Restricted Project Styles
+   ========================================= */
+.restricted-card {
+    grid-column: 1 / -1;
+    border-color: rgba(220, 38, 38, 0.4);
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.1);
+}
+
+.restricted-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(220, 38, 38, 0.3);
+    border-color: #ef4444;
+}
+
+.restricted-badge {
+    display: inline-block;
+    background: rgba(220, 38, 38, 0.15);
+    color: #f87171;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.project-features li {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-features i {
+    color: var(--accent-primary);
+}
+
+.project-gallery {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.project-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
+}
+
+.term-img {
+    height: 150px;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-fast);
+}
+
+.term-img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-primary);
+}
+
+.restricted-overlay {
+    background: rgba(220, 38, 38, 0.1) !important;
+}
+
+.restricted-link {
+    background: #dc2626 !important;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+}
+
+/* =========================================
    Contact Section
    ========================================= */
 .contact-subtitle {
