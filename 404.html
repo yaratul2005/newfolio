@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Yaser Ahmmed Ratul</title>
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .error-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: clamp(6rem, 20vw, 12rem);
+            line-height: 1;
+            margin-bottom: 1rem;
+            animation: textBreathe 3s ease-in-out infinite alternate;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <main class="error-section">
+        <h1 class="error-code text-gradient">404</h1>
+        <p class="error-message">Oops! Looks like you got lost in space.</p>
+        <a href="index.html" class="btn-primary">Return Home</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
