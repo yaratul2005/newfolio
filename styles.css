@@ -407,8 +407,25 @@ ul {
     font-size: 1.2rem;
     color: var(--accent-primary);
     margin-bottom: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    animation: textBreathe 3s ease-in-out infinite alternate;
+}
+
+@keyframes textBreathe {
+    0% {
+        opacity: 0.8;
+        letter-spacing: 4px;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 6px;
+        text-shadow: 0 0 25px rgba(212, 175, 55, 1);
+    }
 }
 
 .hero h1 {
@@ -474,6 +491,13 @@ ul {
     letter-spacing: 2px;
     position: relative;
     display: inline-block;
+    transition: var(--transition-slow);
+}
+
+.section-title:hover {
+    letter-spacing: 4px;
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    color: var(--accent-secondary);
 }
 
 /* =========================================
@@ -761,6 +785,7 @@ ul {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
     margin-bottom: 4rem;
     transition: var(--transition-slow);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .mega-link::before {
@@ -772,12 +797,18 @@ ul {
     overflow: hidden;
     color: var(--accent-primary);
     -webkit-text-stroke: 1px var(--accent-primary);
-    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
     white-space: nowrap;
+    filter: drop-shadow(0 0 0px var(--accent-primary));
 }
 
 .mega-link:hover::before {
     width: 100%;
+    filter: drop-shadow(0 0 25px var(--accent-primary));
+}
+
+.mega-link:hover {
+    transform: scale(1.05);
 }
 
 .social-links {
