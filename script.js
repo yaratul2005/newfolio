@@ -9,7 +9,7 @@ document.addEventListener('mousemove', (e) => {
     // Update cursor position directly for the small dot
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
-    
+
     // Smoothly follow the cursor with the larger circle
     setTimeout(() => {
         follower.style.left = e.clientX + 'px';
@@ -21,7 +21,7 @@ links.forEach(link => {
     link.addEventListener('mouseenter', () => {
         follower.classList.add('cursor-hover');
     });
-    
+
     link.addEventListener('mouseleave', () => {
         follower.classList.remove('cursor-hover');
     });
@@ -107,19 +107,49 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             const navHeight = document.querySelector('.navbar').offsetHeight;
             const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
         }
     });
+});
+
+// =========================================
+// Image Lightbox Modal
+// =========================================
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".modal-close");
+const galleryImages = document.querySelectorAll(".term-img, .edu-img, .profile-img");
+
+galleryImages.forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener("click", function () {
+        if (modal) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    });
+});
+
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+}
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
 });
