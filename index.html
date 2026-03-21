@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Custom Cursor -->
     <div class="cursor"></div>
@@ -43,13 +47,23 @@
                 <div class="blob blob-1"></div>
                 <div class="blob blob-2"></div>
             </div>
-            <div class="hero-content container">
-                <p class="subtitle fade-up">Hi, I'm Yaser Ahmmed Ratul</p>
-                <h1 class="fade-up delay-1">I build <span class="text-gradient">digital stuff</span> that <br/>just works.</h1>
-                <p class="description fade-up delay-2">Full-Stack Developer | WordPress & SEO Specialist | Digital Marketer</p>
-                <div class="hero-actions fade-up delay-3">
-                    <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="mailto:ratul41g@gmail.com" class="btn-secondary">Contact Me</a>
+            <div class="hero-content container has-image">
+                <div class="hero-text-area">
+                    <p class="subtitle fade-up">Hi, I'm Yaser Ahmmed Ratul</p>
+                    <h1 class="fade-up delay-1">I build <span class="text-gradient">digital stuff</span> that <br />just
+                        works.</h1>
+                    <p class="description fade-up delay-2">Full-Stack Developer | WordPress & SEO Specialist | Digital
+                        Marketer</p>
+                    <div class="hero-actions fade-up delay-3">
+                        <a href="#projects" class="btn-primary">View My Work</a>
+                        <a href="mailto:ratul41g@gmail.com" class="btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image-area fade-up delay-2">
+                    <div class="image-frame glassmorphism">
+                        <img src="media/my image/soloyokonu.png" alt="Yaser Ahmmed Ratul" class="profile-img">
+                        <div class="image-glow"></div>
+                    </div>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -64,8 +78,12 @@
                 <h2 class="section-title slide-in-left">About <span class="text-gradient">Me</span></h2>
                 <div class="about-grid">
                     <div class="about-text slide-in-left delay-1">
-                        <p>Results-driven Full-Stack Developer with hands-on experience in WordPress full-site development, SEO optimization, PHP/MySQL backend development, and DevOps practices.</p>
-                        <p>Proven track record of building and deploying production-ready web applications on shared hosting environments. Skilled in Meta Ads marketing with demonstrated lead generation results. Experienced with API integration, Python (Flask), TypeScript, MongoDB, and prompt engineering.</p>
+                        <p>Results-driven Full-Stack Developer with hands-on experience in WordPress full-site
+                            development, SEO optimization, PHP/MySQL backend development, and DevOps practices.</p>
+                        <p>Proven track record of building and deploying production-ready web applications on shared
+                            hosting environments. Skilled in Meta Ads marketing with demonstrated lead generation
+                            results. Experienced with API integration, Python (Flask), TypeScript, MongoDB, and prompt
+                            engineering.</p>
                         <p>Currently pursuing a BSc in Computer Science and Engineering.</p>
                     </div>
                     <div class="about-stats slide-in-right delay-1">
@@ -154,27 +172,29 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-column slide-in-right">
                         <h2 class="section-title">Education <span class="text-gradient">Path</span></h2>
-                        <div class="timeline">
-                            <div class="timeline-item glassmorphism">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-date">2025 – Present</div>
-                                <h3>BSc in Computer Science & Engineering</h3>
-                                <p>Institute of Science and Technology, Dhanmondi, Dhaka</p>
+                        <div class="edu-visual-list">
+                            <div class="edu-card glassmorphism">
+                                <div class="edu-img-wrapper">
+                                    <img src="media/university/hwuy.jpg" alt="University" class="edu-img">
+                                </div>
+                                <div class="edu-content">
+                                    <div class="timeline-date">2025 – Present</div>
+                                    <h3>BSc in Comp. Science & Engineering</h3>
+                                    <p>Institute of Science and Technology</p>
+                                </div>
                             </div>
-                            <div class="timeline-item glassmorphism">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-date">2023</div>
-                                <h3>Higher Secondary Certificate (HSC) – Science</h3>
-                                <p>Ispahani Public School and College, Cumilla</p>
-                            </div>
-                            <div class="timeline-item glassmorphism">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-date">2021</div>
-                                <h3>Secondary School Certificate (SSC) – Science</h3>
-                                <p>Ispahani Public School and College, Cumilla</p>
+                            <div class="edu-card glassmorphism">
+                                <div class="edu-img-wrapper">
+                                    <img src="media/school/wjdwiuehd.webp" alt="School" class="edu-img">
+                                </div>
+                                <div class="edu-content">
+                                    <div class="timeline-date">2021 & 2023</div>
+                                    <h3>HSC & SSC – Science</h3>
+                                    <p>Ispahani Public School and College</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,7 +210,8 @@
                     <div class="project-card glassmorphism scale-in">
                         <div class="project-content">
                             <h3>Great 10 - PHP Streaming Platform</h3>
-                            <p>Built a fully functional PHP/MySQL streaming site deployable on shared hosting without SSH or server-level access. Integrated REST APIs for dynamic content.</p>
+                            <p>Built a fully functional PHP/MySQL streaming site deployable on shared hosting without
+                                SSH or server-level access. Integrated REST APIs for dynamic content.</p>
                             <div class="project-tech">
                                 <span>PHP</span>
                                 <span>MySQL</span>
@@ -204,7 +225,8 @@
                     <div class="project-card glassmorphism scale-in delay-1">
                         <div class="project-content">
                             <h3>Davida - E-Commerce & SEO</h3>
-                            <p>Developed and maintained a business website with full SEO implementation and e-commerce functionality. Handled Meta ads marketing.</p>
+                            <p>Developed and maintained a business website with full SEO implementation and e-commerce
+                                functionality. Handled Meta ads marketing.</p>
                             <div class="project-tech">
                                 <span>WordPress</span>
                                 <span>WooCommerce</span>
@@ -223,10 +245,12 @@
         <section id="contact" class="contact section-padding">
             <div class="container text-center">
                 <h2 class="section-title slide-in-bottom">Let's <span class="text-gradient">Connect</span></h2>
-                <p class="contact-subtitle fade-up delay-1">Open to freelance, remote, and on-site developer or digital marketing roles.</p>
-                
-                <a href="mailto:ratul41g@gmail.com" class="mega-link fade-up delay-2" data-text="ratul41g@gmail.com">ratul41g@gmail.com</a>
-                
+                <p class="contact-subtitle fade-up delay-1">Open to freelance, remote, and on-site developer or digital
+                    marketing roles.</p>
+
+                <a href="mailto:ratul41g@gmail.com" class="mega-link fade-up delay-2"
+                    data-text="ratul41g@gmail.com">ratul41g@gmail.com</a>
+
                 <div class="social-links fade-up delay-3">
                     <a href="tel:+8801722081109" class="social-icon"><i class="fas fa-phone"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
@@ -248,4 +272,5 @@
     <!-- Scripts -->
     <script src="script.js"></script>
 </body>
+
 </html>
