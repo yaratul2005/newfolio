@@ -838,7 +838,9 @@ ul {
     gap: 1rem;
     margin-bottom: 2rem;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .project-gallery::-webkit-scrollbar {
@@ -858,12 +860,23 @@ ul {
     border: 1px solid var(--glass-border);
     transition: var(--transition-fast);
     cursor: pointer;
+    flex-shrink: 0;
+    scroll-snap-align: center;
 }
 
 .term-img:hover {
     transform: scale(1.05);
     border-color: var(--accent-primary);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 768px) {
+    .term-img {
+        width: 85vw;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        max-width: 320px;
+    }
 }
 
 /* =========================================
