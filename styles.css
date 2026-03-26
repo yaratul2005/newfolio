@@ -945,6 +945,134 @@ ul {
 }
 
 /* =========================================
+   Before/After AI Mockup Section
+   ========================================= */
+.before-after-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Variable for JS slider control */
+    --position: 50%;
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ba-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Second image is clipped via polygon bound to the --position variable */
+.after-wrapper {
+    clip-path: polygon(0 0, var(--position) 0, var(--position) 100%, 0 100%);
+}
+
+.ba-slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    cursor: grab;
+}
+
+.ba-slider:active {
+    cursor: grabbing;
+}
+
+.ba-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 4px;
+    height: 100vh;
+    background: transparent;
+    cursor: ew-resize;
+}
+
+.ba-slider::-moz-range-thumb {
+    width: 4px;
+    height: 100vh;
+    background: transparent;
+    cursor: ew-resize;
+}
+
+.slider-button {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-glow);
+    color: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.slider-button i {
+    font-size: 1.2rem;
+}
+
+.slider-button::before {
+    content: '';
+    position: absolute;
+    top: -1000px;
+    bottom: -1000px;
+    left: 50%;
+    width: 3px;
+    background: rgba(212, 175, 55, 0.8);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.ba-label {
+    position: absolute;
+    bottom: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(10, 10, 12, 0.7);
+    color: var(--text-main);
+    backdrop-filter: blur(5px);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--glass-border);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.label-before {
+    right: 20px;
+}
+
+.label-after {
+    left: 20px;
+}
+
+/* =========================================
    Contact Section
    ========================================= */
 .contact-subtitle {

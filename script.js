@@ -153,3 +153,15 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+// =========================================
+// Before/After Image Slider Logic
+// =========================================
+const baContainer = document.querySelector('.before-after-container');
+const baSlider = document.getElementById('baSlider');
+
+if (baSlider && baContainer) {
+    baSlider.addEventListener('input', (e) => {
+        baContainer.style.setProperty('--position', `${e.target.value}%`);
+    });
+}
