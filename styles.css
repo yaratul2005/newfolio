@@ -954,14 +954,21 @@ ul {
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
     border: 1px solid var(--glass-border);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     /* Variable for JS slider control */
     --position: 50%;
 }
 
-.img-wrapper {
+.img-wrapper.before-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+}
+
+.img-wrapper.after-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -971,9 +978,17 @@ ul {
 
 .ba-img {
     width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.after-wrapper .ba-img {
     height: 100%;
     object-fit: cover;
 }
+
 
 /* Second image is clipped via polygon bound to the --position variable */
 .after-wrapper {
